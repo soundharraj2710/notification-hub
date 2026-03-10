@@ -10,14 +10,15 @@ import Products from "./pages/Products";
 function App() {
   return (
     <ToastProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/notification-hub">
         <Navbar />
         <ToastContainer />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/Home" index exact element={<Home />} />
+          <Route path="/About" element={<About />} />
           <Route path="/products" element={<Products />} />
+
         </Routes>
       </BrowserRouter>
     </ToastProvider>
